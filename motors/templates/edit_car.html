@@ -1,0 +1,37 @@
+<!-- car_management/templates/edit_car.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Car</title>
+</head>
+<body>
+
+<h2>Edit Car</h2>
+
+<form method="post" action="{% url 'editcar' car.id %}">
+    {% csrf_token %}
+    
+    <label for="brand">Brand:</label>
+    <input type="text" id="brand" name="brand" value="{{ car.brand }}" required>
+    <br>
+    
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company" value="{{ car.company }}" required>
+    <br>
+    
+    <label for="model">Model:</label>
+    <input type="text" id="model" name="model" value="{{ car.model }}" required>
+    <br>
+    
+    <label for="number">Number:</label>
+    <input type="text" id="number" name="number" value="{{ car.number }}" required>
+    <br>
+
+    <button type="submit">Save Changes</button>
+</form>
+
+</body>
+</html>

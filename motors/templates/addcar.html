@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Car</title>
+</head>
+<body>
+
+<h2>Add Car</h2>
+
+<form method="post" action="{% url 'addcar' %}">
+    {% csrf_token %}
+    <label for="brand">Brand:</label>
+    <input type="text"  name="brand" required>
+    <br>
+    
+    <label for="company">Company:</label>
+    <input type="text"  name="company" required>
+    <br>
+    
+    <label for="model">Model:</label>
+    <input type="text"  name="model" required>
+    <br>
+    
+    <label for="number">Number:</label>
+    <input type="text" name="number" required>
+    <br>
+
+    <button type="submit">Add Car</button>
+</form>
+<a href="{% url 'logout' %}" >Logout</a>
+
+</body>
+</html>
+
+</body>
+</html>
